@@ -1,32 +1,21 @@
-import { Result } from "postcss"
 import { useState } from "react"
-import { Link } from "react-router-dom"
-import Results from "./Results"
 import { useNavigate } from "react-router-dom"
 const Calculator = () => {
     const inputStyles = "border outline-none rounded-md px-2 py-2"
 
     const navigate = useNavigate()
-
     const [grossPay, setGrossPay] = useState(0)
     const [nonCashBenefits, setNonCashBenefits] = useState(0)
     const [pension, setPension] = useState(0)
     const [otherDeductions, setOtherDeductions] = useState(0);
   
     const [housingProvidedByEmployee, setHousingProvidedByEmployee] = useState(false);
-    const [housingType, setHousingType] = useState("ordinary");
     const [housingValue, setHousingValue] = useState(0);
     const [rentToEmployee, setRentToEmployee] = useState(0);
     const [ignoreBenefits, setIgnoreBenefits] = useState(false);
-    const [nssfRate, setNSSFrate] = useState("old"); 
+    
     const [nssfTier, setNSSFtier] = useState("");
-    const [nssfTier2, setNSSFtier2] = useState(0);
     
-    const [nssFTier1and2, setnssFTier1and2] = useState(0)
-    
-
-
-
 
     const calculatePAYE = (taxableIncome) => {
         const taxBands = [
@@ -89,9 +78,7 @@ const Calculator = () => {
         setRentToEmployee(event.target.value)
     }
 
-    const handleTotalNssf = (event) => {
-        setnssFTier1and2(event.target.value)
-    }
+
 
     const handleHouseProvidedEmployee = (event) => {
         setHousingProvidedByEmployee(event.target.value)
@@ -156,7 +143,7 @@ const Calculator = () => {
             intialDeductions = NHIF + OLD_NSSF;
         }
        
-        const PAYE = calculatePAYE(grossPay);
+        const PAYE = calculatePAYE(grossPay).toFixed(2);
         const totalDeductions = Number(intialDeductions) + Number(pension) + Number(rentToEmployee) + Number(PAYE)
         const netPay = grossPay - totalDeductions
         const houseBenefit = grossPay * 0.15
