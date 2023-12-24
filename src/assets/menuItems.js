@@ -20,13 +20,13 @@ export const menuItems = [
     },
      
 
-    {
-        title: 'about us',
-        url: '#'
-    },
+    // {
+    //     title: 'about us',
+    //     url: '#'
+    // },
 
-    {
-        title: 'feedback',
-        url: '#'
-    }
+    // {
+    //     title: 'feedback',
+    //     url: '#'
+    // }
 ]

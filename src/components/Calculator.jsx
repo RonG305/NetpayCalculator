@@ -185,8 +185,8 @@ const Calculator = () => {
           <div>
               <form action="" className="text-sm " onSubmit={handleSubmit}>
                 
-                  <div className="grid-cols-2 md:grid">
-                  <div className="gap-3 my-5 md:flex">
+                  <div className=" px-10">
+                  <div className=" gap-3 my-5 md:flex">
                   <p>Gross pay</p>
                   <input
                       type="number"
@@ -197,7 +197,7 @@ const Calculator = () => {
                   />
               </div>
 
-              <div className="flex gap-3 my-5 ">
+              <div className=" md:flex gap-3 my-5 ">
                   <p>Non-Cash Benefits</p>
                   <input
                       type="number"
@@ -208,7 +208,7 @@ const Calculator = () => {
                   />
               </div>
 
-              <div className="flex gap-3 my-5 ">
+              <div className="md:flex gap-3 my-5 ">
                   <p>Pension Contribution</p>
                   <input
                       type="number"
@@ -222,7 +222,7 @@ const Calculator = () => {
               </div>
 
 
-              <div className="flex gap-3 my-5 ">
+              <div className="md:flex gap-3 my-5 ">
                   <p>Other Allowable Deductions</p>
                   <input
                       type="number"
@@ -242,8 +242,10 @@ const Calculator = () => {
                   {/* Housed by employer */}
 
                 
+
+                
                   
-                  <div className="flex gap-3 my-5 ">
+                  <div className=" px-10 gap-3 my-5 ">
                   <p>Housed by employee</p>
                   <input
                       type="checkbox"
@@ -254,7 +256,7 @@ const Calculator = () => {
                   />
                   </div>
 
-                  <div className="">
+                  <div className="px-10">
                   <p className="my-4 font-bold ">Type of Housing</p>
                   <select name="" id="">
                           <option value="ordinary">ordinary</option>
@@ -262,7 +264,7 @@ const Calculator = () => {
                   </select>
                   
 
-                  <div className="flex gap-3 my-5 ">
+                  <div className=" gap-3 my-5 ">
                   <p>value of Housing</p>
                   <input
                       type="number"
@@ -274,7 +276,7 @@ const Calculator = () => {
               </div>
                    
                   
-              <div className="gap-3 my-5 md:flex">
+              <div className=" gap-3 my-5 md:flex">
                   <p>Rent To Employee</p>
                   <input
                       type="number"
@@ -291,7 +293,7 @@ const Calculator = () => {
 
                   {/* NSSF AND NHIF  */}
 
-                  <div className="gap-3 my-5 md:flex">
+                  <div className=" px-10 gap-3 my-5 md:flex">
                   <p>Ignore non-cash benefits up to Ksh 3,000</p>
                   <input
                       type="checkbox"
@@ -302,7 +304,7 @@ const Calculator = () => {
                   />
                   </div>
                   
-                  <div className="gap-3 my-5 md:flex">
+                  <div className=" px-10 gap-3 my-5 md:flex">
                     <p>Use new NSSF rates - Tier I only</p>
                     <input
                         type="radio"
@@ -314,7 +316,7 @@ const Calculator = () => {
                     />
                     </div>
 
-                    <div className="gap-3 my-5 md:flex">
+                    <div className=" px-10 gap-3 my-5 md:flex">
                     <p>Use new NSSF rates - Tier I & II</p>
                     <input
                         type="radio"
@@ -326,7 +328,7 @@ const Calculator = () => {
                     />
                     </div>
 
-                    <div className="gap-3 my-5 md:flex">
+                    <div className="px-10 gap-3 my-5 md:flex">
                     <p>Use old NSSF rates</p>
                     <input
                         type="radio"
@@ -339,14 +341,20 @@ const Calculator = () => {
                     </div>
 
                   
-                  
+                  <div className=" px-10">
                   <button type="submit" onClick={handleClick} className="px-4 py-2 text-white bg-blue-700 rounded-md ">calculate</button>
+                  </div>
+                  
                 
 
 
               </form>
-              
+
+              <div className=" px-10">
               <p className="my-5 text-sm ">This calculator works out an employee's net pay by subtractings <strong>PAYE, NSSF, NHIF</strong>  and <strong>pension fund </strong> contribution from the monthly gross pay. In order to work out taxable pay, the calculator requires non-cash benefits and any allowable deductions other than NSSF and pension fund contribution.</p>
+              </div>
+              
+             
 
 
             

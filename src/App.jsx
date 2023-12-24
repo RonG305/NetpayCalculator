@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <div className=' flex items-center justify-center font-poppins' >
+    <div className=' flex items-center justify-center font-poppins px-4' >
       <div className=' bg-slate-50 rounded-md md:w-1/2 shadow-md px-4 py-6'>
         <Navbar />
         <Header />
